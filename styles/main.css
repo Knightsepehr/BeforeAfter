@@ -1,0 +1,247 @@
+#red-triangle{
+    content: "";
+	width: 0;
+	height: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+	border-top: 120px solid transparent;
+	border-left: 140px solid #f4511e;
+	border-bottom: 100px solid #f4511e;
+    border-right: 120px solid transparent;
+}
+#red-triangle::after{
+    content: "";
+    position: fixed;
+    background-color: #212121;
+    width: 260px;
+    height: 534px;
+    bottom: 0px;
+    left: -62px;
+    transform: skew(50deg);
+}
+#black-triangle{
+    content: "";
+	width: 0;
+	height: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+	border-top: 120px solid #212121;
+	border-left: 140px solid transparent;
+	border-bottom: 100px solid transparent;
+    border-right: 120px solid #212121;
+}
+#black-triangle::before{
+    content: "";
+    position: fixed;
+    background-color: #f4511e;
+    width: 260px;
+    height: 534px;
+    top: 0px;
+    right: -62px;
+    transform: skew(50deg);
+}
+main{
+    transform: skew(50deg);
+    position: fixed;
+    background: transparent;
+    width: calc(100% - 300px);
+    height: calc(100%);
+    right: 111px;
+    top: 0;
+}
+main::before{
+    content: "";
+    position: fixed;
+    background-color: #f4511e;
+    width: 260px;
+    height: 700px;
+    bottom: 0px;
+    left: -253px;
+    transform: skew(179deg);
+}
+
+main > *{
+    position: absolute;
+    left: 170px;
+    transform: skew(-50deg);
+}
+.contact{
+    margin-top: calc(30%);
+    width: 30%;
+    margin-left: calc(20%);
+}
+.info{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: min-content;
+    width: 100%;
+    margin-top: 5px;
+}
+.info i{
+    margin:0px 5px;
+    min-width: 20px;
+}
+.images{
+    position: absolute;
+    top: 250px;
+    left: -40px;
+}
+#meow{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+#meow2{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 15px;
+    top: calc(100% - 50px);
+    left: calc(100% - 100px);
+}
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(123, 255, 0, 0.384); /* Black w/ opacity */
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.666);
+
+}
+
+.modal-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: max-content;
+}
+
+#close {
+    color: #ff0202;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: #ff0202c0;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* ==================== */
+
+.idk{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(168, 168, 168);
+}
+input{
+    outline: none;
+}
+.w3-button{
+    margin-top: 5%;
+    width: 100%;
+}
+.modal-form{
+    padding: 10%;
+}
+.w3-check{
+    margin-right: 5%;
+}
+#checkbox-div{
+    display: flex;
+    align-items: center;
+
+}
