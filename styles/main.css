@@ -1,3 +1,7 @@
+:root{
+    --primary : #FF0000;
+    --secondary : #212121;
+}
 #red-triangle{
     content: "";
 	width: 0;
@@ -6,14 +10,14 @@
     bottom: 0;
     left: 0;
 	border-top: 120px solid transparent;
-	border-left: 140px solid #f4511e;
-	border-bottom: 100px solid #f4511e;
+	border-left: 140px solid var(--primary);
+	border-bottom: 100px solid var(--primary);
     border-right: 120px solid transparent;
 }
 #red-triangle::after{
     content: "";
     position: fixed;
-    background-color: #212121;
+    background-color: var(--secondary);
     width: 260px;
     height: 534px;
     bottom: 0px;
@@ -27,15 +31,15 @@
     position: fixed;
     top: 0;
     right: 0;
-	border-top: 120px solid #212121;
+	border-top: 120px solid var(--secondary);
 	border-left: 140px solid transparent;
 	border-bottom: 100px solid transparent;
-    border-right: 120px solid #212121;
+    border-right: 120px solid var(--secondary);
 }
 #black-triangle::before{
     content: "";
     position: fixed;
-    background-color: #f4511e;
+    background-color: var(--primary);
     width: 260px;
     height: 534px;
     top: 0px;
@@ -54,7 +58,7 @@ main{
 main::before{
     content: "";
     position: fixed;
-    background-color: #f4511e;
+    background-color: var(--primary);
     width: 260px;
     height: 700px;
     bottom: 0px;
@@ -192,13 +196,15 @@ main > *{
 }
 
 .modal-content {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    /* justify-content: space-between; */
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: max-content;
+    width: calc(50%);
+    height: max-content;
+    
 }
 
 #close {
@@ -236,6 +242,7 @@ input{
 }
 .modal-form{
     padding: 10%;
+
 }
 .w3-check{
     margin-right: 5%;
@@ -244,4 +251,28 @@ input{
     display: flex;
     align-items: center;
 
+}
+.d-flex{
+    display: flex;
+}
+.modal-form span{
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 10px;
+    
+}
+.modal-form{
+    justify-content: center;
+    align-items: center;
+}
+.modal-form span img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.flex-col{
+    flex-direction: column;
 }
